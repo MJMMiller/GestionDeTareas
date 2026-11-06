@@ -11,10 +11,28 @@
 ## Investigación sobre React
 
 ### Panorama
-Origen, quién lo mantiene, versión actual, licencia; filosofía (libreria)
+
+#### Origen
+Fue creado en el año 2013 por Jordan Walke, quien trabajaba en Facebook. Su objetivo era crear interfaces de usuario dinámicas y reutilizables. 
+
+#### Quien lo mantiene
+Es mantenido por **React team** y por desarrolles de la comunidad de código abierto
+
+#### Versión
+Actualmente se encuentra en la versión 19 
+
+#### Licencia
+Tiene la MIT License y es de código abierto
+
+#### Filosofía
+Como biblioteca, se basa en estos principios:
+1. Declarativa: describe como se ve la interfaz de acuerdo a datos
+2. Componentes: piezas de código reutilizables
+3. Unidireccional: datos van de componentes padres a hijos mediante propiedades
+4. Basado en estados: la interfaz cambia cuando se alteran los datos
+
 
 ### Instalación
-
 Creación de proyecto (Angular CLI, Vite, create-vue), estructura de carpetas, hola mundo explicado línea por línea.
 Incluir capturas
 
@@ -37,19 +55,23 @@ CLI, DevTools, librerías de UI, build de producción, despliegue (Netlify, Verc
 
 ## Métricas
 
-| Métrica | Cómo medirla |
+| Métrica | Resultado |
 | :--- | :--- |
-| Tiempo de configuración inicial (min) | Desde instalar hasta ver el proyecto corriendo |
-| Líneas de código de la app (LOC) | `npx cloc src` |
+| Tiempo de configuración inicial (min) | 5 min |
+| Líneas de código de la app (LOC) | `npx cloc src` nos da  |
 | Tamaño del build de producción (KB) | Carpeta `dist` tras el build |
 | Puntaje de rendimiento Lighthouse | Chrome DevTools, modo móvil |
-| Horas totales del grupo | Registro de horas por integrante |
 
+Horas totales del grupo:
+- Mateo Miller:
+- Jonnathan Saavedra
+- Daniel Durán:
+- Nicolás Cedillo:
 ---
 
 ## Uso de IA 
 
-Cuaderno de NotebookLM: 
+Cuaderno de NotebookLM: [link](https://notebook.google.com/notebook/20b92080-224d-46a7-b0bc-4e0a6c3e1ae9)
 
 ### Declaración de uso
 
