@@ -146,8 +146,9 @@ function App() {
 
       </main>
 
-      <footer>
-        <p>Gestor - Control de tareas universitarias</p>
+      <footer className="pie-pagina">
+        <p className="pie-pagina-titulo">Gestor de tareas</p>
+        <small>POWERED BY REACT</small>
       </footer>
     </>
   )
