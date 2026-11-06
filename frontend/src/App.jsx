@@ -2,6 +2,7 @@ import graduationCap from './assets/icons/graduation-cap.svg'
 import logsIcon from './assets/icons/logs.svg'
 import clockIcon from './assets/icons/clock.svg'
 import checkIcon from './assets/icons/circle-check.svg'
+import MateriaSelect from './components/MateriasSelect'
 import './App.css'
 
 function App() {
@@ -145,6 +146,8 @@ function App() {
             <button type="button">Siguiente</button>
           </nav>
         </section>
+
+        <MateriaSelect />
 
       </main>
 
