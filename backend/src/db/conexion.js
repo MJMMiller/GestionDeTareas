@@ -1,5 +1,7 @@
 import oracledb from 'oracledb';
 
+oracledb.outFormat = oracledb.OUT_FORMAT_OBJECT;
+
 export function conectar() {
   return oracledb.getConnection({
     user: process.env.DB_USER,
