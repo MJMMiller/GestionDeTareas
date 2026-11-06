@@ -33,8 +33,24 @@ Como biblioteca, se basa en estos principios:
 
 
 ### Instalación
-Creación de proyecto (Angular CLI, Vite, create-vue), estructura de carpetas, hola mundo explicado línea por línea.
-Incluir capturas
+
+#### Creación del proyecto
+Primero tenemos que tener instalado `npm` y `node`. Para luego ejecutar
+```bash
+npm create vite@latest nombre -- --template react
+```
+
+#### Estructura 
+![](assets/estructura_react.png)
+| Fichero | Función |
+| :--- | :--- |
+| `node-modules` | Dependencias y bibliotecas instaladas|
+| `public` | Guarda archivos estáticos |
+| `src` | Código fuente de la aplicación |
+| `index.html`| HTML donde se ejecuta react |
+| `package.json` | Información del proyecto |
+| `vite.config.js` | Configuración de Vite |
+
 
 ### Componentes
 Componentes, plantillas o JSX, props/inputs, eventos, renderizado condicional y listas, ciclo de vida
