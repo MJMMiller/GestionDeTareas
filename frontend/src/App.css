@@ -84,12 +84,51 @@ header button {
 }
 
 .resumen-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
     flex: 1;
     padding: 20px;
     background-color: var(--color-superficie);
     border: 1px solid var(--color-borde);
-    border-radius: var(--radio-card);
-    box-shadow: var(--sombra-card);
+    border-radius: var(--radio-card);   
+}
+
+#card-total{
+    border: 2px solid var(--color-fondo-azul-claro);
+}
+
+.resumen-card-icon{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+#img-total{
+    background-color: var(--color-fondo-azul-claro);
+}
+
+#img-total img{
+    width: 30px;
+}
+
+#img-pendientes{
+    background-color: var(--color-fondo-naranja-claro);
+}
+
+#img-pendientes img{
+    width: 30px;
+}
+
+#img-completadas{
+    background-color: var(--color-fondo-verde-claro);
+}
+
+#img-completadas img{
+    width: 30px;
 }
 
 .resumen-card h3 {

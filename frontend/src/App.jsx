@@ -1,4 +1,7 @@
 import graduationCap from './assets/icons/graduation-cap.svg'
+import logsIcon from './assets/icons/logs.svg'
+import clockIcon from './assets/icons/clock.svg'
+import checkIcon from './assets/icons/circle-check.svg'
 import './App.css'
 
 function App() {
@@ -26,24 +29,44 @@ function App() {
         </section>
 
         <section className="resumen">
-          <article className="resumen-card">
-            <h3>Total de tareas</h3>
-            <p>12</p>
+
+          <article className="resumen-card" id='card-total'>
+          
+            <div className='resumen-card-icon'id='img-total'>
+              <img src={logsIcon} alt="Icono de tareas" />
+            </div>
+          
+            <div className='resumen-card-caption'>
+              <h3>Total de tareas</h3>
+              <p>12</p>
+            </div>
+
           </article>
 
-          <article className="resumen-card">
-            <h3>Pendientes</h3>
-            <p>8</p>
+          <article className="resumen-card" id='card-pendientes'>
+            
+            <div className='resumen-card-icon' id='img-pendientes'>
+              <img src={clockIcon} alt="Icono de reloj" />
+            </div>
+
+            <div className='resumen-card-caption'>
+              <h3>Pendientes</h3>
+              <p>8</p>
+            </div>
+
           </article>
 
-          <article className="resumen-card">
-            <h3>Completadas</h3>
-            <p>4</p>
-          </article>
-
-          <article className="resumen-card">
-            <h3>Próximas entregas</h3>
-            <p>3</p>
+          <article className="resumen-card" id='card-completadas'>
+            
+            <div className='resumen-card-icon' id='img-completadas'>
+              <img src={checkIcon} alt="Icono de tareas completadas" />      
+            </div>
+            
+            <div className='resumen-card-caption'>
+              <h3>Completadas</h3>
+              <p>4</p>
+            </div>
+            
           </article>
         </section>
 
