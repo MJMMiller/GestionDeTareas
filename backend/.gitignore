@@ -1,0 +1,4 @@
+node_modules/
+
+# Credenciales locales (cada uno tiene la suya; copiar de .env.example)
+.env
