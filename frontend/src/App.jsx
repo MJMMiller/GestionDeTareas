@@ -8,7 +8,9 @@ function App() {
   return (
     <>
       <header>
-        <h1>Gestor de tareas</h1>
+        <img className="logo-icon" src={graduationCap} alt="Logo Gestor" />
+        <h1>Gestor</h1>
+        <p>Tareas Universitarias</p>
         <button type="button">Añadir tarea</button>
       </header>
 
@@ -66,7 +68,7 @@ function App() {
               <h3>Completadas</h3>
               <p>4</p>
             </div>
-            
+
           </article>
         </section>
 

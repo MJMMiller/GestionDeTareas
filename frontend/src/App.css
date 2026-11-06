@@ -14,9 +14,9 @@ header {
     background-color: var(--color-encabezado);
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 15px 40px;
     font-family: var(--fuente-principal);
 }
 
@@ -24,6 +24,24 @@ header h1 {
     color: var(--color-texto-claro);
     font-size: 24px;
     font-weight: 700;
+}
+
+header p {
+    border-left: 1px solid var(--color-texto-claro);
+    color: var(--color-texto-claro);
+    font-family: var(--fuente-principal);
+    padding-left: 30px;
+    margin-left: 10px;
+}
+
+.logo-icon {
+    filter: brightness(0) invert(1);
+    width: 45px;
+    height: 45px;
+}
+
+header button {
+    margin-left: auto;
 }
 
 header button {
