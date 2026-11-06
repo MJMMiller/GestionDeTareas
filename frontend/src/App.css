@@ -14,9 +14,9 @@ header {
     background-color: var(--color-encabezado);
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 15px 40px;
     font-family: var(--fuente-principal);
 }
 
@@ -24,6 +24,24 @@ header h1 {
     color: var(--color-texto-claro);
     font-size: 24px;
     font-weight: 700;
+}
+
+header p {
+    border-left: 1px solid var(--color-texto-claro);
+    color: var(--color-texto-claro);
+    font-family: var(--fuente-principal);
+    padding-left: 30px;
+    margin-left: 10px;
+}
+
+.logo-icon {
+    filter: brightness(0) invert(1);
+    width: 45px;
+    height: 45px;
+}
+
+header button {
+    margin-left: auto;
 }
 
 header button {
@@ -84,12 +102,93 @@ header button {
 }
 
 .resumen-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
     flex: 1;
     padding: 20px;
     background-color: var(--color-superficie);
     border: 1px solid var(--color-borde);
-    border-radius: var(--radio-card);
-    box-shadow: var(--sombra-card);
+    border-radius: var(--radio-card);   
+}
+
+.resumen-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#card-total {
+    border: 2px solid var(--color-fondo-azul-claro);
+}
+
+#card-total:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 10px 30px 0px var(--color-fondo-azul-claro);
+}
+
+#card-total h3,
+#card-total p {
+    color: var(--color-azul-oscuro);
+}
+
+#card-pendientes {
+    border: 2px solid var(--color-fondo-naranja-claro);
+}
+
+#card-pendientes:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 10px 30px 0px var(--color-fondo-naranja-claro);
+}
+
+#card-pendientes h3,
+#card-pendientes p {
+    color: var(--color-pendiente);
+}
+
+#card-completadas {
+    border: 2px solid var(--color-fondo-verde-claro);
+}
+
+#card-completadas:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 10px 30px 0px var(--color-fondo-verde-claro);
+}
+
+#card-completadas h3,
+#card-completadas p {
+    color: var(--color-completada);
+}
+
+.resumen-card-icon{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+#img-total{
+    background-color: var(--color-fondo-azul-claro);
+}
+
+#img-total img{
+    width: 30px;
+}
+
+#img-pendientes{
+    background-color: var(--color-fondo-naranja-claro);
+}
+
+#img-pendientes img{
+    width: 30px;
+}
+
+#img-completadas{
+    background-color: var(--color-fondo-verde-claro);
+}
+
+#img-completadas img{
+    width: 30px;
 }
 
 .resumen-card h3 {
