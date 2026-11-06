@@ -24,3 +24,14 @@ header button{
     padding: 10px;
     color: var(--color-fondo);
 }
+
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(
+    135deg,
+    #f8faff 0%,
+    #e8effc 50%,
+    #d4e3fa 100%
+  );
+}
