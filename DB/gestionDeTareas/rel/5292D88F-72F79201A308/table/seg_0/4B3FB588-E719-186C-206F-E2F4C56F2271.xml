@@ -1,0 +1,151 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4B3FB588-E719-186C-206F-E2F4C56F2271" name="GDT_TAREAS">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 04:16:33 UTC</createdTime>
+<generatorID>C68EB034-C2CB-7CD3-88F9-E61CFAC4AECF</generatorID>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="tar_codigo" id="00F92DB7-09CC-1181-E1BD-A300B0BAB0C2">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 04:16:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[Codigo unico de cada tarea]]></commentInRDBMS>
+<generatorID>18206E4A-ADB1-6DD1-AC6F-60C5182B6419</generatorID>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tar_actividad" id="DE8C21A1-FAC9-D37E-0562-EF2E5495E8E2">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 04:16:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nombre de la tarea]]></commentInRDBMS>
+<generatorID>96AA8E39-41FC-688C-3179-821006C15466</generatorID>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tar_estado" id="44D9F7DE-B370-4C9C-5C30-FA5F3CD69EC0">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 04:16:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[Estado de la tarea:
+P = Pendiente
+E = En progreso
+F = Finalizado]]></commentInRDBMS>
+<generatorID>0C4E6619-693E-9CCB-1699-2E5010427D22</generatorID>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<constraintName>CK_GDT_TAREAS_ESTADO</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="E" description="En Progreso"/>
+<valueDef value="F" description="Finalizada"/>
+<valueDef value="P" description="Pendiente"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tar_fecha" id="27194C16-8095-17CB-D800-B145BBDD02E5">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 04:16:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha finalizacion de la tarea]]></commentInRDBMS>
+<generatorID>381226D0-07D5-827D-5DDF-14816A515E8E</generatorID>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tar_prioridad" id="B6E70B1E-D44D-757B-6EF6-0FB5095E31CB">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 04:16:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[Prioridad de la tarea:
+B = Baja
+M = Media
+A = Alta]]></commentInRDBMS>
+<generatorID>BD885B39-8C7F-4E8B-D51C-4919934851F3</generatorID>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<constraintName>CK_GDT_TAREAS_PRIORIDAD</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="A" description="Alta"/>
+<valueDef value="B" description="Baja"/>
+<valueDef value="M" description="Media"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tar_descripcion" id="413CA4C8-C5FD-E6A1-53A2-831E9FA0E30A">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 04:16:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[Descripcion de la tarea]]></commentInRDBMS>
+<generatorID>7606C331-93C5-6E03-3A1A-ED5A4D91C759</generatorID>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GDT_MATERIAS_mat_codigo" id="59A3F719-6219-44A2-9D86-36F39DCE7CE7">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 04:16:33 UTC</createdTime>
+<generatorID>83FC37F0-191E-466C-2C3B-6FDD57C2EDC6</generatorID>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="152E2A48-40F9-A370-DCAB-014FA3E1E4C2" referredColumn="5D7CC3FA-C2C4-5908-FAB4-1B05430FDB6C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BF3D74C4-5778-D028-AE91-F227D4BE7339" name="GDT_TAREAS_PK">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 04:16:33 UTC</createdTime>
+<generatorID>14F6F7A7-35C0-0F15-32E8-3BE25295EEBA</generatorID>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="00F92DB7-09CC-1181-E1BD-A300B0BAB0C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7ECA5770-B8F0-C6B4-EA37-8A1B81F4F7B8" name="GDT_TAREAS_GDT_MATERIAS_FK">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 04:16:33 UTC</createdTime>
+<generatorID>CB84A69B-A179-DECC-4903-D5445E7795B8</generatorID>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="59A3F719-6219-44A2-9D86-36F39DCE7CE7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

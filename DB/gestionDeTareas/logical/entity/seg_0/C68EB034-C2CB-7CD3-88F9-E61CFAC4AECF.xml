@@ -1,0 +1,152 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C68EB034-C2CB-7CD3-88F9-E61CFAC4AECF" name="GDT_TAREAS">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 03:57:01 UTC</createdTime>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<engineerTo>
+<item key="5292D88F-D501-0B64-9665-72F79201A308" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="tar_codigo" id="18206E4A-ADB1-6DD1-AC6F-60C5182B6419">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 03:57:11 UTC</createdTime>
+<commentInRDBMS><![CDATA[Codigo unico de cada tarea]]></commentInRDBMS>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<engineerTo>
+<item key="5292D88F-D501-0B64-9665-72F79201A308" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tar_actividad" id="96AA8E39-41FC-688C-3179-821006C15466">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 03:57:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nombre de la tarea]]></commentInRDBMS>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<engineerTo>
+<item key="5292D88F-D501-0B64-9665-72F79201A308" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tar_estado" id="0C4E6619-693E-9CCB-1699-2E5010427D22">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 03:58:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[Estado de la tarea:
+P = Pendiente
+E = En progreso
+F = Finalizado]]></commentInRDBMS>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<engineerTo>
+<item key="5292D88F-D501-0B64-9665-72F79201A308" value="true"/>
+</engineerTo>
+<constraintName>CK_GDT_TAREAS_ESTADO</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="E" description="En Progreso"/>
+<valueDef value="F" description="Finalizada"/>
+<valueDef value="P" description="Pendiente"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tar_fecha" id="381226D0-07D5-827D-5DDF-14816A515E8E">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 03:59:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[Fecha finalizacion de la tarea]]></commentInRDBMS>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<engineerTo>
+<item key="5292D88F-D501-0B64-9665-72F79201A308" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tar_prioridad" id="BD885B39-8C7F-4E8B-D51C-4919934851F3">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 04:00:03 UTC</createdTime>
+<commentInRDBMS><![CDATA[Prioridad de la tarea:
+B = Baja
+M = Media
+A = Alta]]></commentInRDBMS>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<engineerTo>
+<item key="5292D88F-D501-0B64-9665-72F79201A308" value="true"/>
+</engineerTo>
+<constraintName>CK_GDT_TAREAS_PRIORIDAD</constraintName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<listOfValues>
+<valueDef value="A" description="Alta"/>
+<valueDef value="B" description="Baja"/>
+<valueDef value="M" description="Media"/>
+</listOfValues>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tar_descripcion" id="7606C331-93C5-6E03-3A1A-ED5A4D91C759">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 04:00:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[Descripcion de la tarea]]></commentInRDBMS>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<engineerTo>
+<item key="5292D88F-D501-0B64-9665-72F79201A308" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="mat_codigo" id="83FC37F0-191E-466C-2C3B-6FDD57C2EDC6">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 04:01:13 UTC</createdTime>
+<generatorID>CB84A69B-A179-DECC-4903-D5445E7795B8</generatorID>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<engineerTo>
+<item key="5292D88F-D501-0B64-9665-72F79201A308" value="true"/>
+</engineerTo>
+<referedAttribute>A05AE6B5-212B-97ED-6402-35A9C4C59872</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="14F6F7A7-35C0-0F15-32E8-3BE25295EEBA" name="GDT_TAREAS PK">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 03:58:12 UTC</createdTime>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<engineerTo>
+<item key="5292D88F-D501-0B64-9665-72F79201A308" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>18206E4A-ADB1-6DD1-AC6F-60C5182B6419</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

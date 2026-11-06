@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="4E7717D8-F224-5948-9B6A-05080AD5D021" name="GDT_MATERIAS" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="D72B71EF-1E37-2078-EDE3-0E68D95A692F" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Entity" objectID="C68EB034-C2CB-7CD3-88F9-E61CFAC4AECF" name="GDT_TAREAS" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="D72B71EF-1E37-2078-EDE3-0E68D95A692F" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Relation" objectID="CB84A69B-A179-DECC-4903-D5445E7795B8" name="materias_tareas_fk" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Relation" propertyParentId="D72B71EF-1E37-2078-EDE3-0E68D95A692F" propertySourceId="4E7717D8-F224-5948-9B6A-05080AD5D021" propertyTargetId="C68EB034-C2CB-7CD3-88F9-E61CFAC4AECF"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

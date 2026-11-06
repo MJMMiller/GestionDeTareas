@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="258BDADD-F0C4-EBF7-B819-4D87D964A6F7" name="GDT_MATERIAS" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="5292D88F-D501-0B64-9665-72F79201A308" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Table" objectID="4B3FB588-E719-186C-206F-E2F4C56F2271" name="GDT_TAREAS" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="5292D88F-D501-0B64-9665-72F79201A308" propertySourceId="" propertyTargetId=""/>
+   <object objectType="FKIndexAssociation" objectID="152E2A48-40F9-A370-DCAB-014FA3E1E4C2" name="GDT_TAREAS_GDT_MATERIAS_FK" seqName="seg_0" containerID="4B3FB588-E719-186C-206F-E2F4C56F2271" refContainerID="258BDADD-F0C4-EBF7-B819-4D87D964A6F7" propertyClassName="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" propertyParentId="5292D88F-D501-0B64-9665-72F79201A308" propertySourceId="258BDADD-F0C4-EBF7-B819-4D87D964A6F7" propertyTargetId="4B3FB588-E719-186C-206F-E2F4C56F2271"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

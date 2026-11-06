@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="materias_tareas_fk" directorySegmentName="seg_0" id="CB84A69B-A179-DECC-4903-D5445E7795B8">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 04:01:13 UTC</createdTime>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<engineerTo>
+<item key="5292D88F-D501-0B64-9665-72F79201A308" value="true"/>
+</engineerTo>
+<sourcePk>018743A3-DF66-E8A8-E3DD-8BF81EA59265</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>tiene</nameOnSource>
+<nameOnTarget>pertenece</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>4E7717D8-F224-5948-9B6A-05080AD5D021</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>C68EB034-C2CB-7CD3-88F9-E61CFAC4AECF</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

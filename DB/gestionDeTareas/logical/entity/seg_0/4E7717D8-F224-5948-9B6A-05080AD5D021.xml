@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4E7717D8-F224-5948-9B6A-05080AD5D021" name="GDT_MATERIAS">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 03:53:17 UTC</createdTime>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<engineerTo>
+<item key="5292D88F-D501-0B64-9665-72F79201A308" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="mat_codigo" id="A05AE6B5-212B-97ED-6402-35A9C4C59872">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 03:53:36 UTC</createdTime>
+<commentInRDBMS><![CDATA[Codigo unico de la materia]]></commentInRDBMS>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<engineerTo>
+<item key="5292D88F-D501-0B64-9665-72F79201A308" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="mat_materia" id="1E38580E-0C83-C790-2906-86CB49BE2E76">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 03:54:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[Nombre de la materia]]></commentInRDBMS>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<engineerTo>
+<item key="5292D88F-D501-0B64-9665-72F79201A308" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="018743A3-DF66-E8A8-E3DD-8BF81EA59265" name="GDT_MATERIAS PK">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 03:55:16 UTC</createdTime>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<engineerTo>
+<item key="5292D88F-D501-0B64-9665-72F79201A308" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A05AE6B5-212B-97ED-6402-35A9C4C59872</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="830546A0-7235-A698-D06B-867216DCA706" name="UQ_GDT_MATERIAS_MATERIA">
+<createdBy>PC</createdBy>
+<createdTime>2026-11-06 04:11:17 UTC</createdTime>
+<ownerDesignName>gestionDeTareas</ownerDesignName>
+<engineerTo>
+<item key="5292D88F-D501-0B64-9665-72F79201A308" value="true"/>
+</engineerTo>
+<newElementsIDs>1E38580E-0C83-C790-2906-86CB49BE2E76</newElementsIDs>
+<usedAttributes>
+<attributeRef>1E38580E-0C83-C790-2906-86CB49BE2E76</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
