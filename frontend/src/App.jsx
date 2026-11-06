@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { verificarSalud } from './services/api'
+import './App.css'
 
 function App() {
   const [estado, setEstado] = useState('cargando')
