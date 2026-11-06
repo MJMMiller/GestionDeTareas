@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: var(--color-encabezado);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+header h1{
+    color: var(--color-fondo);
+    padding-right: 20px;
+}
+
+header button{
+    background-color: var(--color-boton);
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    color: var(--color-fondo);
+}
