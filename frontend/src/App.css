@@ -1,37 +1,106 @@
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-header{
+main {
+    background-color: var(--color-fondo);
+    font-family: var(--fuente-principal);
+}
+
+header {
     background-color: var(--color-encabezado);
     display: flex;
-    text-align: center;
+    align-items: center;
     justify-content: center;
+    gap: 20px;
     padding: 20px;
+    font-family: var(--fuente-principal);
 }
 
-header h1{
-    color: var(--color-fondo);
-    padding-right: 20px;
+header h1 {
+    color: var(--color-texto-claro);
+    font-size: 24px;
+    font-weight: 700;
 }
 
-header button{
+header button {
     background-color: var(--color-boton);
     border: 0;
-    border-radius: 5px;
-    padding: 10px;
-    color: var(--color-fondo);
+    border-radius: var(--radio-boton);
+    padding: 10px 15px;
+    color: var(--color-texto-claro);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
-body {
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(
-    135deg,
-    #f8faff 0%,
-    #e8effc 50%,
-    #d4e3fa 100%
-  );
+.descripcion {
+    display: flex;
+    align-items: center;
+    padding: 30px 80px;
+}
+
+.description-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-celeste-fondos);
+    border-radius: 15px;
+    flex-shrink: 0;
+}
+
+.description-icon img {
+    width: 50px;
+}
+
+.descripcion-caption {
+    padding-inline-start: 30px;
+}
+
+.descripcion-caption h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--color-azul-oscuro);
+    margin-bottom: 8px;
+}
+
+.descripcion-caption p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-texto-secundario);
+}
+
+.resumen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-inline: 80px;
+}
+
+.resumen-card {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-card);
+    box-shadow: var(--sombra-card);
+}
+
+.resumen-card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-texto);
+    margin-bottom: 8px;
+}
+
+.resumen-card p {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--color-azul-oscuro);
 }

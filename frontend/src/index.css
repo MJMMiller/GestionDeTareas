@@ -1,17 +1,28 @@
-:root{
---color-encabezado: #0f2d4d;
---color-fondo: #f5f8ff;
---color-boton: #297ee7;
-    
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-body {
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(
-    135deg,
-    #f8faff 0%,
-    #e8ef 50%,
-    #d4e3 100%
-  );
+:root {
+  --color-encabezado: #0F2D4D;
+  --color-azul-oscuro: #142D5A;
+  --color-boton: #297EE7;
+
+  --color-fondo: #F4F7FC;
+  --color-celeste-fondos: #E2ECFB;
+  --color-superficie: #FFFFFF;
+
+  --color-texto: #1E293B;
+  --color-texto-secundario: #64748B;
+  --color-texto-claro: #F5F8FF;
+
+  --color-borde: #DCE4EF;
+
+  --color-pendiente: #D97706;
+  --color-completada: #16A34A;
+  --color-progreso: #297EE7;
+
+  --fuente-principal: 'Inter', sans-serif;
+
+  --sombra-card: 0 2px 8px rgba(15, 45, 77, 0.06);
+
+  --radio-card: 12px;
+  --radio-boton: 8px;
 }
