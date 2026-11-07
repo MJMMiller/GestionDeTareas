@@ -284,6 +284,30 @@ header button:hover {
 .lista-tareas nav button:hover {
     background-color: var(--color-celeste-fondos);
 }
+.casillaMarcarEstado{
+    padding-top: 16px!important;
+    padding-left: 12px!important;
+    padding-right: 0px!important;
+    padding-bottom: 12px!important;
+}
+
+.marcarEstado{
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 1.7rem;
+    height: 1.7rem;
+
+    border: 2px solid #ccc;
+    border-radius: 100%;
+
+    cursor: pointer;
+}
+
+.marcarEstado:checked{
+    background-color: var(--color-celeste-fondos);
+    border-color: var(--color-celeste-fondos);
+}
 
 @media (max-width: 600px) {
     .lista-tareas {

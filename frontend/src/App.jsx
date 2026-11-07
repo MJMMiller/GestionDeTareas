@@ -5,6 +5,7 @@ import clockIcon from './assets/icons/clock.svg'
 import checkIcon from './assets/icons/circle-check.svg'
 import MateriaSelect from './components/MateriasSelect'
 import TareaForm from './components/TareaForm'
+import TaskItem from './components/TaskItem.jsx'
 
 import './App.css'
 
@@ -103,6 +104,7 @@ function App() {
           <table>
             <thead>
               <tr>
+                <th></th>
                 <th>Actividad</th>
                 <th>Estado</th>
                 <th>Fecha de entrega</th>
@@ -113,50 +115,10 @@ function App() {
             </thead>
 
             <tbody>
-              <tr>
-                <td>Práctica 3</td>
-                <td>Sin empezar</td>
-                <td>6 de noviembre de 2026</td>
-                <td>Redes 2</td>
-                <td>—</td>
-                <td>Media</td>
-              </tr>
 
-              <tr>
-                <td>Práctica 2</td>
-                <td>Sin empezar</td>
-                <td>5 de noviembre de 2026</td>
-                <td>Redes 2</td>
-                <td>—</td>
-                <td>Media</td>
-              </tr>
+              <TaskItem nombre="Practica 3" estado="Sin empezar" fecha="Sin fecha" materia="Redes 2" nota="-" prioridad="media" />
 
-              <tr>
-                <td>Práctica 1</td>
-                <td>En progreso</td>
-                <td>3 de noviembre de 2026</td>
-                <td>Redes 2</td>
-                <td>—</td>
-                <td>Media</td>
-              </tr>
-
-              <tr>
-                <td>Prueba Redes</td>
-                <td>Sin empezar</td>
-                <td>5 de noviembre de 2026</td>
-                <td>Redes 2</td>
-                <td>—</td>
-                <td>Media</td>
-              </tr>
-
-              <tr>
-                <td>Api Web Simpsons</td>
-                <td>En progreso</td>
-                <td>5 de noviembre de 2026</td>
-                <td>Programación y Plataformas Web</td>
-                <td>—</td>
-                <td>Media</td>
-              </tr>
+              
             </tbody>
           </table>
           </div>
