@@ -53,7 +53,20 @@ npm create vite@latest nombre -- --template react
 
 
 ### Componentes
-Componentes, plantillas o JSX, props/inputs, eventos, renderizado condicional y listas, ciclo de vida
+
+Los **componentes** permiten dividir una interfaz de usuario en partes independientes y reutilizables. 
+
+**JSX** (JavaScript XML) es una extensión de JavaScript que permite escribir estructuras similares a HTML dentro del código JavaScript.
+
+Las **props** son datos que un componente recibe desde su componente padre. Permiten reutilizar componentes enviándoles información diferente.
+
+Se permite responder a las interacciones del usuario mediante manejadores de **eventos**.
+
+El **renderizado condicional** permite mostrar diferentes elementos de la interfaz dependiendo de una condición.
+
+React permite representar **listas** de elementos utilizando métodos de JavaScript como `map()`
+
+Los componentes tienen un **ciclo de vida** que describe las diferentes etapas por las que pasan durante su funcionamiento.
 
 ### Estado y reactividad
 Reactividad (signals, hooks, refs), estado global (servicios, Context/Zustand, Pinia)
