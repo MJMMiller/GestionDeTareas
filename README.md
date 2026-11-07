@@ -82,13 +82,28 @@ Son funciones especiales de React que permiten utilizar características como el
 - `useCallback`:Permite memorizar funciones.
 
 ### Rutas y API
-Enrutador, consumo de API REST con fetch o HttpClient, manejo de errores y carga
+El **enrutamiento** permite navegar entre diferentes páginas o vistas de una aplicación sin tener que recargar completamente el documento HTML.
+
+React puede comunicarse con servidores externos para obtener, enviar, modificar o eliminar información. Para esto usamos `fetch()
 
 ### Pruebas
-Herramienta de pruebas (Jasmine/Karma, Vitest, Jest) y pruebas de componentes
+Las pruebas permiten comprobar que los componentes y funcionalidades de una aplicación funcionan correctamente.
+
+Herramientas de pruebas
+|Herramienta| Función|
+|----|---|
+|Vitest	|Ejecuta pruebas unitarias y de integración.|
+|Jest|Permite realizar pruebas automatizadas de JavaScript y React.|
+|React Testing Library|Facilita las pruebas de componentes desde la perspectiva del usuario.|
 
 ### Ecosistema y despliegue
-CLI, DevTools, librerías de UI, build de producción, despliegue (Netlify, Vercel, GitHub Pages)
+React no proporciona una CLI oficial para generar proyectos y administrar toda su estructura.
+
+Para crear proyectos se utilizan herramientas externas como **Vite**. También se pueden utilizar otras herramientas compatibles con React.
+
+- *React*: biblioteca para construir interfaces.
+- *Vite*: herramienta de desarrollo y construcción.
+- *npm*: administrador de paquetes.
 
 ---
 
@@ -106,6 +121,7 @@ Horas totales del grupo:
 - Jonnathan Saavedra
 - Daniel Durán:
 - Nicolás Cedillo:
+
 ---
 
 ## Uso de IA 
