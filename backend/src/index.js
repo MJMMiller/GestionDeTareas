@@ -1,7 +1,6 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
-import { conectar } from './db/conexion.js';
 import materiasRoutes from './routes/materias.routes.js';
 import tareasRoutes from './routes/tareas.route.js';
 
