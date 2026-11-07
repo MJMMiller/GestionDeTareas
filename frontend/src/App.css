@@ -1,13 +1,13 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-main {
-    background-color: var(--color-fondo);
+body {
     font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
 }
 
 header {
@@ -17,7 +17,6 @@ header {
     justify-content: flex-start;
     gap: 15px;
     padding: 15px 40px;
-    font-family: var(--fuente-principal);
 }
 
 header h1 {
@@ -29,7 +28,6 @@ header h1 {
 header p {
     border-left: 1px solid var(--color-texto-claro);
     color: var(--color-texto-claro);
-    font-family: var(--fuente-principal);
     padding-left: 30px;
     margin-left: 10px;
 }
@@ -42,10 +40,6 @@ header p {
 
 header button {
     margin-left: auto;
-    transition: background-color 0.2s, color 0.2s;
-}
-
-header button {
     background-color: var(--color-boton);
     border: 0;
     border-radius: var(--radio-boton);
@@ -54,6 +48,7 @@ header button {
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 header button:hover {
@@ -114,57 +109,26 @@ header button:hover {
     flex: 1;
     padding: 20px;
     background-color: var(--color-superficie);
-    border: 1px solid var(--color-borde);
-    border-radius: var(--radio-card);   
-}
-
-.resumen-card {
+    border-radius: var(--radio-card);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-#card-total {
-    border: 2px solid var(--color-fondo-azul-claro);
-}
-
-#card-total:hover {
+.resumen-card:hover {
     transform: scale(1.01);
-    box-shadow: 0px 10px 30px 0px var(--color-fondo-azul-claro);
 }
 
-#card-total h3,
-#card-total p {
-    color: var(--color-azul-oscuro);
+.resumen-card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
 }
 
-#card-pendientes {
-    border: 2px solid var(--color-fondo-naranja-claro);
+.resumen-card p {
+    font-size: 26px;
+    font-weight: 700;
 }
 
-#card-pendientes:hover {
-    transform: scale(1.01);
-    box-shadow: 0px 10px 30px 0px var(--color-fondo-naranja-claro);
-}
-
-#card-pendientes h3,
-#card-pendientes p {
-    color: var(--color-pendiente);
-}
-
-#card-completadas {
-    border: 2px solid var(--color-fondo-verde-claro);
-}
-
-#card-completadas:hover {
-    transform: scale(1.01);
-    box-shadow: 0px 10px 30px 0px var(--color-fondo-verde-claro);
-}
-
-#card-completadas h3,
-#card-completadas p {
-    color: var(--color-completada);
-}
-
-.resumen-card-icon{
+.resumen-card-icon {
     width: 70px;
     height: 70px;
     display: flex;
@@ -173,47 +137,63 @@ header button:hover {
     border-radius: 10px;
 }
 
-#img-total{
-    background-color: var(--color-fondo-azul-claro);
-}
-
-#img-total img{
+.resumen-card-icon img {
     width: 30px;
 }
 
-#img-pendientes{
-    background-color: var(--color-fondo-naranja-claro);
+#card-total {
+    border: 2px solid var(--color-fondo-azul-claro);
 }
 
-#img-pendientes img{
-    width: 30px;
+#card-total:hover {
+    box-shadow: 0px 10px 30px 0px var(--color-fondo-azul-claro);
 }
 
-#img-completadas{
-    background-color: var(--color-fondo-verde-claro);
-}
-
-#img-completadas img{
-    width: 30px;
-}
-
-.resumen-card h3 {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--color-texto);
-    margin-bottom: 8px;
-}
-
-.resumen-card p {
-    font-size: 26px;
-    font-weight: 700;
+#card-total h3,
+#card-total p {
     color: var(--color-azul-oscuro);
 }
 
-/* Lista y tabla de tareas */
+#img-total {
+    background-color: var(--color-fondo-azul-claro);
+}
+
+#card-pendientes {
+    border: 2px solid var(--color-fondo-naranja-claro);
+}
+
+#card-pendientes:hover {
+    box-shadow: 0px 10px 30px 0px var(--color-fondo-naranja-claro);
+}
+
+#card-pendientes h3,
+#card-pendientes p {
+    color: var(--color-pendiente);
+}
+
+#img-pendientes {
+    background-color: var(--color-fondo-naranja-claro);
+}
+
+#card-completadas {
+    border: 2px solid var(--color-fondo-verde-claro);
+}
+
+#card-completadas:hover {
+    box-shadow: 0px 10px 30px 0px var(--color-fondo-verde-claro);
+}
+
+#card-completadas h3,
+#card-completadas p {
+    color: var(--color-completada);
+}
+
+#img-completadas {
+    background-color: var(--color-fondo-verde-claro);
+}
+
 .lista-tareas {
     margin: 30px 80px;
-    color: var(--color-texto);
 }
 
 .lista-tareas h2 {
@@ -256,6 +236,53 @@ header button:hover {
     background-color: var(--color-fondo);
 }
 
+.tabla-vacia {
+    padding: 48px 20px;
+    text-align: center;
+}
+
+.tabla-vacia p {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-azul-oscuro);
+    margin-bottom: 6px;
+}
+
+.tabla-vacia small {
+    font-size: 13px;
+    color: var(--color-texto-secundario);
+}
+
+.btn-icono {
+    display: inline-flex;
+    vertical-align: middle;
+    background: none;
+    border: 0;
+    padding: 6px;
+    border-radius: var(--radio-boton);
+    color: var(--color-texto-secundario);
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-icono + .btn-icono {
+    margin-left: 6px;
+}
+
+.btn-icono:hover {
+    background-color: var(--color-celeste-fondos);
+    color: var(--color-boton);
+}
+
+.btn-icono-peligro {
+    color: var(--color-peligro, #dc2626);
+}
+
+.btn-icono-peligro:hover {
+    background-color: var(--color-fondo-rojo-claro, #fde2e2);
+    color: var(--color-peligro-hover, #b91c1c);
+}
+
 .lista-tareas nav {
     display: flex;
     align-items: center;
@@ -285,14 +312,19 @@ header button:hover {
     background-color: var(--color-celeste-fondos);
 }
 
-@media (max-width: 600px) {
-    .lista-tareas {
-        margin: 24px 20px;
-    }
+.lista-tareas nav button.activa {
+    background-color: var(--color-boton);
+    border-color: var(--color-boton);
+    color: var(--color-texto-claro);
+}
 
-    .lista-tareas nav p {
-        width: 100%;
-    }
+.lista-tareas nav button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.lista-tareas nav button:disabled:hover {
+    background-color: var(--color-superficie);
 }
 
 .pie-pagina {
@@ -303,9 +335,7 @@ header button:hover {
     gap: 8px 24px;
     padding: 18px clamp(20px, 6vw, 80px);
     border-top: 1px solid var(--color-borde);
-    background-color: var(--color-fondo);
     color: var(--color-texto-secundario);
-    font-family: var(--fuente-principal);
     line-height: 1.6;
 }
 
@@ -323,92 +353,243 @@ header button:hover {
     position: fixed;
     inset: 0;
     background-color: rgba(15, 45, 77, 0.5);
+    backdrop-filter: blur(2px);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 100;
+    padding: 16px;
 }
 
 .dialogo {
     background-color: var(--color-superficie);
     border-radius: var(--radio-card);
-    padding: 24px;
-    width: 90%;
-    max-width: 480px;
+    padding: 28px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 50px rgba(15, 45, 77, 0.25);
 }
 
 .dialogo-encabezado {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.dialogo-encabezado h3 {
+    font-size: 20px;
+    color: var(--color-azul-oscuro);
 }
 
 .dialogo-encabezado button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
     background: none;
     border: 0;
-    font-size: 18px;
+    border-radius: var(--radio-boton);
+    font-size: 16px;
     cursor: pointer;
     color: var(--color-texto-secundario);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.dialogo-encabezado button:hover {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
 }
 
 .dialogo form {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
+}
+
+.dialogo label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-texto);
+    margin-top: 8px;
+}
+
+.dialogo label:first-child {
+    margin-top: 0;
 }
 
 .dialogo input,
 .dialogo select,
 .dialogo textarea {
-    padding: 8px;
+    width: 100%;
+    padding: 10px 12px;
+    background-color: var(--color-fondo);
     border: 1px solid var(--color-borde);
     border-radius: var(--radio-boton);
     font-family: var(--fuente-principal);
+    font-size: 14px;
+    color: var(--color-texto);
+    transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
 }
 
-.dialogo form button[type="submit"] {
-    margin-top: 8px;
-    background-color: var(--color-boton);
-    color: var(--color-texto-claro);
-    border: 0;
-    border-radius: var(--radio-boton);
-    padding: 10px;
-    font-weight: 600;
-    cursor: pointer;
+.dialogo textarea {
+    min-height: 80px;
+    resize: vertical;
 }
 
-.btn-guardar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 40px;
-    transition: background-color 0.3s;
-}
-
-.btn-guardar.guardado {
-    background-color: var(--color-completada) !important;
-    font-size: 20px;
-}
-
-.spinner {
-    width: 18px;
-    height: 18px;
-    border: 3px solid rgba(255, 255, 255, 0.4);
-    border-top-color: #ffffff;
-    border-radius: 50%;
-    animation: girar 0.8s linear infinite;
-}
-
-@keyframes girar {
-    to {
-        transform: rotate(360deg);
-    }
+.dialogo input:hover,
+.dialogo select:hover,
+.dialogo textarea:hover {
+    border-color: var(--color-texto-secundario);
 }
 
 .dialogo input:focus,
 .dialogo select:focus,
 .dialogo textarea:focus {
-    outline: 2px solid var(--color-boton);
-    outline-offset: 1px;
+    outline: none;
+    background-color: var(--color-superficie);
+    border-color: var(--color-boton);
+    box-shadow: 0 0 0 3px var(--color-celeste-fondos);
+}
+
+.btn-guardar {
+    min-height: 44px;
+    margin-top: 16px;
+    padding: 10px;
+    background-color: var(--color-boton);
+    color: var(--color-texto-claro);
+    border: 0;
+    border-radius: var(--radio-boton);
+    font-family: var(--fuente-principal);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-guardar:hover {
+    background-color: var(--color-azul-oscuro);
+}
+
+.dialogo-confirmar {
+    max-width: 420px;
+}
+
+.dialogo-confirmar h3 {
+    font-size: 20px;
+    color: var(--color-peligro, #dc2626);
+}
+
+.dialogo-confirmar p {
+    color: var(--color-texto-secundario);
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 10px 0 24px;
+}
+
+.dialogo-botones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn-cancelar,
+.btn-peligro {
+    padding: 10px 18px;
+    border-radius: var(--radio-boton);
+    font-family: var(--fuente-principal);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-cancelar {
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    color: var(--color-texto);
+}
+
+.btn-cancelar:hover {
+    background-color: var(--color-fondo);
+    border-color: var(--color-texto-secundario);
+}
+
+.btn-peligro {
+    background-color: var(--color-peligro, #dc2626);
+    border: 1px solid var(--color-peligro, #dc2626);
+    color: #ffffff;
+}
+
+.btn-peligro:hover {
+    background-color: var(--color-peligro-hover, #b91c1c);
+    border-color: var(--color-peligro-hover, #b91c1c);
+}
+
+.notificacion {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 200;
+    padding: 14px 20px;
+    background-color: var(--color-superficie);
+    color: var(--color-texto);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-boton);
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(15, 45, 77, 0.15);
+    animation: aparecer 0.3s ease-out;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .descripcion {
+        padding: 24px 20px;
+    }
+
+    .resumen {
+        flex-direction: column;
+        padding-inline: 20px;
+    }
+
+    .resumen-card {
+        width: 100%;
+    }
+
+    .lista-tareas {
+        margin: 24px 20px;
+    }
+
+    .lista-tareas nav p {
+        width: 100%;
+    }
+
+    .dialogo {
+        padding: 20px;
+    }
+
+    .notificacion {
+        left: 20px;
+        right: 20px;
+    }
 }

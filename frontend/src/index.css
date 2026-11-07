@@ -27,4 +27,8 @@
 
   --radio-card: 12px;
   --radio-boton: 8px;
+
+  --color-peligro: #dc2626;
+  --color-peligro-hover: #b91c1c;
+  --color-fondo-rojo-claro: #fde2e2;
 }
