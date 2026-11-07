@@ -1,24 +1,16 @@
 import { useState, useEffect } from "react";
+import { listarMaterias } from "../services/materias";
 
-function Materias() {
+function MateriasSelect({ value, onChange }) {
 
     const [materias, setMaterias] = useState([]);
-    const [materiaSeleccionada, setMateriaSeleccionada] = useState("");
 
     useEffect(() => {
 
         const cargarMaterias = async () => {
             try {
-                const response = await fetch("http://localhost:3000/api/materias");
-
-                if (!response.ok) {
-                    throw new Error("Error al cargar las materias");
-                }
-
-                const data = await response.json();
-
+                const data = await listarMaterias();
                 setMaterias(data);
-
             } catch (error) {
                 console.error("Error:", error);
             }
@@ -29,24 +21,20 @@ function Materias() {
     }, []);
 
     return (
-        <div>
-            <label htmlFor="materia">Materia:</label>
+        <select
+            value={value}
+            onChange={(e) => onChange(e.target.value)}
+            required
+        >
+            <option value="">Seleccione una materia</option>
 
-            <select
-                id="materia"
-                value={materiaSeleccionada}
-                onChange={(e) => setMateriaSeleccionada(e.target.value)}
-            >
-                <option value="">Seleccione una materia</option>
-
-                {materias.map((materia) => (
-                    <option key={materia.CODIGO} value={materia.CODIGO}>
-                        {materia.MATERIA}
-                    </option>
-                ))}
-            </select>
-        </div>
+            {materias.map((materia) => (
+                <option key={materia.CODIGO} value={materia.CODIGO}>
+                    {materia.MATERIA}
+                </option>
+            ))}
+        </select>
     );
 }
 
-export default Materias;
+export default MateriasSelect;

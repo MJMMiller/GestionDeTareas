@@ -320,3 +320,10 @@ header button:hover {
         transform: rotate(360deg);
     }
 }
+
+.dialogo input:focus,
+.dialogo select:focus,
+.dialogo textarea:focus {
+    outline: 2px solid var(--color-boton);
+    outline-offset: 1px;
+}

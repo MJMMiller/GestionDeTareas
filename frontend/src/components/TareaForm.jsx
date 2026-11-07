@@ -1,52 +1,31 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { crearTarea } from "../services/tareas";
-import { listarMaterias } from "../services/materias";
+import MateriasSelect from "./MateriasSelect";
 
 function TareaForm({ onCerrar }) {
 
     const [actividad, setActividad] = useState("");
     const [fecha, setFecha] = useState("");
     const [materia, setMateria] = useState("");
-    const [prioridad, setPrioridad] = useState("M");
+    const [prioridad, setPrioridad] = useState("");
     const [descripcion, setDescripcion] = useState("");
 
-    const [materias, setMaterias] = useState([]);
     const [estadoBoton, setEstadoBoton] = useState("normal");
 
     const hoy = new Date().toLocaleDateString("en-CA");
 
-    useEffect(() => {
-        const cargarMaterias = async () => {
-            try {
-                const data = await listarMaterias();
-                setMaterias(data);
-            } catch (error) {
-                console.error("Error:", error);
-            }
-        };
-
-        cargarMaterias();
-    }, []);
-
     const guardarTarea = async (e) => {
         e.preventDefault();
-
-        const materiaElegida = materias.find((m) => m.MATERIA === materia);
-
-        if (!materiaElegida) {
-            alert("Selecciona una materia de la lista");
-            return;
-        }
 
         setEstadoBoton("guardando");
 
         try {
             await crearTarea({
                 actividad: actividad,
-                fecha: fecha,
-                materia: materiaElegida.CODIGO,
-                prioridad: prioridad,
-                descripcion: descripcion
+                fecha: fecha || null,
+                materia: Number(materia),
+                prioridad: prioridad || null,
+                descripcion: descripcion || null
             });
 
             setEstadoBoton("guardado");
@@ -68,6 +47,7 @@ function TareaForm({ onCerrar }) {
             <label>Actividad:</label>
             <input
                 type="text"
+                maxLength={200}
                 value={actividad}
                 onChange={(e) => setActividad(e.target.value)}
                 required
@@ -79,26 +59,14 @@ function TareaForm({ onCerrar }) {
                 value={fecha}
                 min={hoy}
                 onChange={(e) => setFecha(e.target.value)}
-                required
             />
 
             <label>Materia:</label>
-            <input
-                type="text"
-                list="lista-materias"
-                placeholder="Escribe para buscar..."
-                value={materia}
-                onChange={(e) => setMateria(e.target.value)}
-                required
-            />
-            <datalist id="lista-materias">
-                {materias.map((m) => (
-                    <option key={m.CODIGO} value={m.MATERIA} />
-                ))}
-            </datalist>
+            <MateriasSelect value={materia} onChange={setMateria} />
 
             <label>Prioridad:</label>
             <select value={prioridad} onChange={(e) => setPrioridad(e.target.value)}>
+                <option value="">Sin prioridad</option>
                 <option value="B">Baja</option>
                 <option value="M">Media</option>
                 <option value="A">Alta</option>
@@ -106,6 +74,7 @@ function TareaForm({ onCerrar }) {
 
             <label>Notas:</label>
             <textarea
+                maxLength={500}
                 value={descripcion}
                 onChange={(e) => setDescripcion(e.target.value)}
             />
@@ -117,7 +86,7 @@ function TareaForm({ onCerrar }) {
             >
                 {estadoBoton === "normal" && "Guardar tarea"}
                 {estadoBoton === "guardando" && <span className="spinner"></span>}
-                {estadoBoton === "guardado" && "Tarea Creada"}
+                {estadoBoton === "guardado" && "Tarea guardada"}
             </button>
 
         </form>

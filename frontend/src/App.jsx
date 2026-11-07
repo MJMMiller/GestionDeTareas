@@ -3,7 +3,6 @@ import graduationCap from './assets/icons/graduation-cap.svg'
 import logsIcon from './assets/icons/logs.svg'
 import clockIcon from './assets/icons/clock.svg'
 import checkIcon from './assets/icons/circle-check.svg'
-import MateriaSelect from './components/MateriasSelect'
 import TareaForm from './components/TareaForm'
 
 import './App.css'
@@ -42,11 +41,11 @@ function App() {
         <section className="resumen">
 
           <article className="resumen-card" id='card-total'>
-          
-            <div className='resumen-card-icon'id='img-total'>
+
+            <div className='resumen-card-icon' id='img-total'>
               <img src={logsIcon} alt="Icono de tareas" />
             </div>
-          
+
             <div className='resumen-card-caption'>
               <h3>Total de tareas</h3>
               <p>12</p>
@@ -55,7 +54,7 @@ function App() {
           </article>
 
           <article className="resumen-card" id='card-pendientes'>
-            
+
             <div className='resumen-card-icon' id='img-pendientes'>
               <img src={clockIcon} alt="Icono de reloj" />
             </div>
@@ -68,11 +67,11 @@ function App() {
           </article>
 
           <article className="resumen-card" id='card-completadas'>
-            
+
             <div className='resumen-card-icon' id='img-completadas'>
-              <img src={checkIcon} alt="Icono de tareas completadas" />      
+              <img src={checkIcon} alt="Icono de tareas completadas" />
             </div>
-            
+
             <div className='resumen-card-caption'>
               <h3>Completadas</h3>
               <p>4</p>
@@ -84,7 +83,7 @@ function App() {
         <section>
           <h2>Lista de tareas</h2>
 
-        {mostrarFormulario && (
+          {mostrarFormulario && (
             <div className="dialogo-fondo">
               <div className="dialogo">
                 <div className="dialogo-encabezado">
@@ -95,7 +94,7 @@ function App() {
                 </div>
 
                 <TareaForm onCerrar={() => setMostrarFormulario(false)} />
-                </div>
+              </div>
             </div>
           )}
 
@@ -169,8 +168,6 @@ function App() {
             <button type="button">Siguiente</button>
           </nav>
         </section>
-
-        <MateriaSelect />
 
       </main>
 
