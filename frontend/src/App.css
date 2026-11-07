@@ -42,6 +42,7 @@ header p {
 
 header button {
     margin-left: auto;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 header button {
@@ -53,6 +54,11 @@ header button {
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+}
+
+header button:hover {
+    background-color: var(--color-superficie);
+    color: var(--color-boton);
 }
 
 .descripcion {
@@ -226,4 +232,91 @@ header button {
 .pie-pagina small {
     font-size: 10px;
     letter-spacing: 1px;
+}
+
+.dialogo-fondo {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(15, 45, 77, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.dialogo {
+    background-color: var(--color-superficie);
+    border-radius: var(--radio-card);
+    padding: 24px;
+    width: 90%;
+    max-width: 480px;
+}
+
+.dialogo-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.dialogo-encabezado button {
+    background: none;
+    border: 0;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--color-texto-secundario);
+}
+
+.dialogo form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.dialogo input,
+.dialogo select,
+.dialogo textarea {
+    padding: 8px;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-boton);
+    font-family: var(--fuente-principal);
+}
+
+.dialogo form button[type="submit"] {
+    margin-top: 8px;
+    background-color: var(--color-boton);
+    color: var(--color-texto-claro);
+    border: 0;
+    border-radius: var(--radio-boton);
+    padding: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-guardar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    transition: background-color 0.3s;
+}
+
+.btn-guardar.guardado {
+    background-color: var(--color-completada) !important;
+    font-size: 20px;
+}
+
+.spinner {
+    width: 18px;
+    height: 18px;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: girar 0.8s linear infinite;
+}
+
+@keyframes girar {
+    to {
+        transform: rotate(360deg);
+    }
 }

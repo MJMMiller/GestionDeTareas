@@ -1,18 +1,26 @@
+import { useState } from 'react'
 import graduationCap from './assets/icons/graduation-cap.svg'
 import logsIcon from './assets/icons/logs.svg'
 import clockIcon from './assets/icons/clock.svg'
 import checkIcon from './assets/icons/circle-check.svg'
 import MateriaSelect from './components/MateriasSelect'
+import TareaForm from './components/TareaForm'
+
 import './App.css'
 
 function App() {
+
+  const [mostrarFormulario, setMostrarFormulario] = useState(false)
+
   return (
     <>
       <header>
         <img className="logo-icon" src={graduationCap} alt="Logo Gestor" />
         <h1>Gestor</h1>
         <p>Tareas Universitarias</p>
-        <button type="button">Añadir tarea</button>
+        <button type="button" onClick={() => setMostrarFormulario(true)}>
+          Añadir tarea
+        </button>
       </header>
 
       <main>
@@ -75,6 +83,21 @@ function App() {
 
         <section>
           <h2>Lista de tareas</h2>
+
+        {mostrarFormulario && (
+            <div className="dialogo-fondo">
+              <div className="dialogo">
+                <div className="dialogo-encabezado">
+                  <h3>Nueva tarea</h3>
+                  <button type="button" onClick={() => setMostrarFormulario(false)}>
+                    ✕
+                  </button>
+                </div>
+
+                <TareaForm onCerrar={() => setMostrarFormulario(false)} />
+                </div>
+            </div>
+          )}
 
           <table>
             <thead>
