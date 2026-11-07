@@ -149,6 +149,7 @@ Respuesta:
 
 Los valores van en **mayúscula**.
 
+
 ## Errores
 
 Si algo falla, cualquier ruta responde `500`:

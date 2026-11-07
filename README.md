@@ -124,6 +124,11 @@ Horas totales del grupo:
 
 ---
 
+## Documentación técnica
+
+- [Guía de instalación y conexión React–Oracle](docs/GUIA_INSTALACION_Y_CONEXION.md)
+
+
 ## Uso de IA 
 
 Cuaderno de NotebookLM: [dar click aquí para abrir el link](https://notebook.google.com/notebook/20b92080-224d-46a7-b0bc-4e0a6c3e1ae9)
