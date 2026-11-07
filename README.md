@@ -111,14 +111,14 @@ Para crear proyectos se utilizan herramientas externas como **Vite**. También s
 
 | Métrica | Resultado |
 | :--- | :--- |
-| Tiempo de configuración inicial (min) | 5 min |
-| Líneas de código de la app (LOC) | `npx cloc src` nos da  |
-| Tamaño del build de producción (KB) | Carpeta `dist` tras el build |
+| Tiempo de configuración inicial (min) | added 149 packages, and audited 150 packages in 22s|
+| Líneas de código de la app | ![](/assets/resultado_cloc.png)  |
+| Tamaño del build de producción (KB) | 288 dist |
 | Puntaje de rendimiento Lighthouse | Chrome DevTools, modo móvil |
 
-Horas totales del grupo:
-- Mateo Miller:
-- Jonnathan Saavedra
+Horas totales del grupo junto con dificultad percibida (de 1 a 5):
+- Mateo Miller: 
+- Jonnathan Saavedra: 
 - Daniel Durán:
 - Nicolás Cedillo:
 
@@ -135,4 +135,4 @@ Cuaderno de NotebookLM: [dar click aquí para abrir el link](https://notebook.go
 
 ### Declaración de uso
 
-Usamos esta IA para ...
+Usamos Claude y Gemini para aprender de la librería y sus conceptos fundamentales. En Gemini creamos un mapa mental con ideas base de React para luego pedir guía tanto a Gemini como a Claude. Además, nos apoyamos en estas herramientas para entender errores que se nos presentaban en el codigo ya sea por sintaxis o mal uso de alguna herramienta. 
