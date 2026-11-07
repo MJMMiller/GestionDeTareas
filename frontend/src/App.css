@@ -126,11 +126,6 @@ header button:hover {
     border: 2px solid var(--color-fondo-azul-claro);
 }
 
-#card-total:hover {
-    transform: scale(1.01);
-    box-shadow: 0px 10px 30px 0px var(--color-fondo-azul-claro);
-}
-
 #card-total h3,
 #card-total p {
     color: var(--color-azul-oscuro);
@@ -140,11 +135,6 @@ header button:hover {
     border: 2px solid var(--color-fondo-naranja-claro);
 }
 
-#card-pendientes:hover {
-    transform: scale(1.01);
-    box-shadow: 0px 10px 30px 0px var(--color-fondo-naranja-claro);
-}
-
 #card-pendientes h3,
 #card-pendientes p {
     color: var(--color-pendiente);
@@ -152,11 +142,6 @@ header button:hover {
 
 #card-completadas {
     border: 2px solid var(--color-fondo-verde-claro);
-}
-
-#card-completadas:hover {
-    transform: scale(1.01);
-    box-shadow: 0px 10px 30px 0px var(--color-fondo-verde-claro);
 }
 
 #card-completadas h3,
@@ -252,9 +237,6 @@ header button:hover {
     border-top: 1px solid var(--color-borde);
 }
 
-.lista-tareas tbody tr:hover {
-    background-color: var(--color-fondo);
-}
 
 .lista-tareas nav {
     display: flex;
