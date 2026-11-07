@@ -1,12 +1,27 @@
+
 import TaskItem from "./TaskItem";
 
-function TablaTareas({ tareas, onCompletar, onEditar, onEliminar }) {
+function TablaTareas({
+    tareas,
+    onCompletar,
+    onEditar,
+    onEliminar,
+    estaFiltrando = false
+}) {
 
     if (tareas.length === 0) {
         return (
             <div className="tabla-vacia">
-                <p>No hay tareas registradas</p>
-                <small>Usa el botón "Añadir tarea" para crear la primera.</small>
+                <p>
+                    {estaFiltrando
+                        ? "No hay tareas con este estado"
+                        : "No hay tareas registradas"}
+                </p>
+                <small>
+                    {estaFiltrando
+                        ? "Selecciona otro filtro para ver más tareas."
+                        : 'Usa el botón "Añadir tarea" para crear la primera.'}
+                </small>
             </div>
         );
     }
