@@ -69,7 +69,17 @@ React permite representar **listas** de elementos utilizando métodos de JavaScr
 Los componentes tienen un **ciclo de vida** que describe las diferentes etapas por las que pasan durante su funcionamiento.
 
 ### Estado y reactividad
-Reactividad (signals, hooks, refs), estado global (servicios, Context/Zustand, Pinia)
+La **reactividad** es la capacidad de React para actualizar la interfaz cuando cambian los datos que utiliza un componente.
+
+#### Hooks
+Son funciones especiales de React que permiten utilizar características como el estado, los efectos secundarios y el contexto dentro de componentes funcionales.Por ejemplo: 
+- `useState`:Permite almacenar y actualizar el estado de un componente.
+- `useEffect`:Permite ejecutar efectos secundarios.
+- `useContext`:Permite acceder a información compartida mediante Context.
+- `useRef`:Permite conservar referencias a elementos y valores entre renderizados.
+- `useReducer`:Permite administrar estados mediante una función reductora.
+- `useMemo`:Permite memorizar resultados de cálculos.
+- `useCallback`:Permite memorizar funciones.
 
 ### Rutas y API
 Enrutador, consumo de API REST con fetch o HttpClient, manejo de errores y carga
@@ -100,7 +110,7 @@ Horas totales del grupo:
 
 ## Uso de IA 
 
-Cuaderno de NotebookLM: [link](https://notebook.google.com/notebook/20b92080-224d-46a7-b0bc-4e0a6c3e1ae9)
+Cuaderno de NotebookLM: [dar click aquí para abrir el link](https://notebook.google.com/notebook/20b92080-224d-46a7-b0bc-4e0a6c3e1ae9)
 
 ### Declaración de uso
 
