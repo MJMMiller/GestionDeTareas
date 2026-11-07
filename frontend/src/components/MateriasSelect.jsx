@@ -30,14 +30,14 @@ function Materias() {
 
     return (
         <div>
-            <label htmlFor="materia">Materia:</label>
+            <label htmlFor="materia"></label>
 
             <select
                 id="materia"
                 value={materiaSeleccionada}
                 onChange={(e) => setMateriaSeleccionada(e.target.value)}
             >
-                <option value="">Seleccione una materia</option>
+                <option value="">Materia</option>
 
                 {materias.map((materia) => (
                     <option key={materia.CODIGO} value={materia.CODIGO}>

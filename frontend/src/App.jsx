@@ -117,7 +117,6 @@ function App() {
             <tbody>
 
               <TaskItem nombre="Practica 3" estado="Sin empezar" fecha="Sin fecha" materia="Redes 2" nota="-" prioridad="media" />
-
               
             </tbody>
           </table>
@@ -133,9 +132,7 @@ function App() {
             <button type="button">Siguiente</button>
           </nav>
         </section>
-
-        <MateriaSelect />
-
+          <MateriaSelect />
       </main>
 
       <footer className="pie-pagina">
