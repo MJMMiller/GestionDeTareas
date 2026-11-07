@@ -81,10 +81,10 @@ function App() {
           </article>
         </section>
 
-        <section>
-          <h2>Lista de tareas</h2>
+        <section className="lista-tareas" aria-labelledby="titulo-tareas">
+          <h2 id="titulo-tareas">Lista de tareas</h2>
 
-        {mostrarFormulario && (
+          {mostrarFormulario && (
             <div className="dialogo-fondo">
               <div className="dialogo">
                 <div className="dialogo-encabezado">
@@ -99,6 +99,7 @@ function App() {
             </div>
           )}
 
+          <div className="tabla-contenedor">
           <table>
             <thead>
               <tr>
@@ -158,6 +159,7 @@ function App() {
               </tr>
             </tbody>
           </table>
+          </div>
 
           <nav aria-label="Paginación de tareas">
             <p>Mostrando 1 - 5 de 12 tareas</p>

@@ -210,6 +210,91 @@ header button:hover {
     color: var(--color-azul-oscuro);
 }
 
+/* Lista y tabla de tareas */
+.lista-tareas {
+    margin: 30px 80px;
+    color: var(--color-texto);
+}
+
+.lista-tareas h2 {
+    margin-bottom: 16px;
+    font-size: 20px;
+    color: var(--color-azul-oscuro);
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-card);
+}
+
+.lista-tareas table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+}
+
+.lista-tareas th,
+.lista-tareas td {
+    padding: 16px;
+    white-space: nowrap;
+}
+
+.lista-tareas th {
+    background-color: var(--color-celeste-fondos);
+    color: var(--color-azul-oscuro);
+    font-weight: 600;
+}
+
+.lista-tareas td {
+    border-top: 1px solid var(--color-borde);
+}
+
+.lista-tareas tbody tr:hover {
+    background-color: var(--color-fondo);
+}
+
+.lista-tareas nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.lista-tareas nav p {
+    margin-right: auto;
+    font-size: 13px;
+    color: var(--color-texto-secundario);
+}
+
+.lista-tareas nav button {
+    padding: 8px 12px;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-boton);
+    background-color: var(--color-superficie);
+    color: var(--color-texto);
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.lista-tareas nav button:hover {
+    background-color: var(--color-celeste-fondos);
+}
+
+@media (max-width: 600px) {
+    .lista-tareas {
+        margin: 24px 20px;
+    }
+
+    .lista-tareas nav p {
+        width: 100%;
+    }
+}
+
 .pie-pagina {
     display: flex;
     align-items: center;
