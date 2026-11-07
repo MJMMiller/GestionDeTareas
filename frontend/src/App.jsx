@@ -8,7 +8,7 @@ import TablaTareas from './components/TablaTareas'
 import ConfirmDialog from './components/ConfirmDialog'
 import Notificacion from './components/Notificacion'
 import Paginacion from './components/Paginacion'
-import { listarTareas, eliminarTarea } from './services/tareas'
+import { listarTareas, actualizarTarea, eliminarTarea } from './services/tareas'
 
 import './App.css'
 
@@ -63,6 +63,22 @@ function App() {
   const errorAlGuardar = (mensaje) => {
     cerrarFormulario()
     mostrarNotificacion(mensaje, 'error')
+  }
+
+  const completarTarea = async (tarea) => {
+    const nuevoEstado = tarea.ESTADO === 'F' ? 'P' : 'F'
+
+    try {
+      await actualizarTarea(tarea.CODIGO, { estado: nuevoEstado })
+      cargarTareas()
+      mostrarNotificacion(
+        nuevoEstado === 'F' ? 'Tarea completada' : 'Tarea marcada como pendiente',
+        'exito'
+      )
+    } catch (error) {
+      console.error('Error:', error)
+      mostrarNotificacion('No se pudo cambiar el estado', 'error')
+    }
   }
 
   const confirmarEliminar = async () => {
@@ -153,6 +169,7 @@ function App() {
           <div className="tabla-contenedor">
             <TablaTareas
               tareas={tareasPagina}
+              onCompletar={completarTarea}
               onEditar={abrirEditar}
               onEliminar={setTareaEliminar}
             />

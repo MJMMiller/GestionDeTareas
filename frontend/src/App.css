@@ -110,11 +110,6 @@ header button:hover {
     padding: 20px;
     background-color: var(--color-superficie);
     border-radius: var(--radio-card);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.resumen-card:hover {
-    transform: scale(1.01);
 }
 
 .resumen-card h3 {
@@ -145,10 +140,6 @@ header button:hover {
     border: 2px solid var(--color-fondo-azul-claro);
 }
 
-#card-total:hover {
-    box-shadow: 0px 10px 30px 0px var(--color-fondo-azul-claro);
-}
-
 #card-total h3,
 #card-total p {
     color: var(--color-azul-oscuro);
@@ -162,10 +153,6 @@ header button:hover {
     border: 2px solid var(--color-fondo-naranja-claro);
 }
 
-#card-pendientes:hover {
-    box-shadow: 0px 10px 30px 0px var(--color-fondo-naranja-claro);
-}
-
 #card-pendientes h3,
 #card-pendientes p {
     color: var(--color-pendiente);
@@ -177,10 +164,6 @@ header button:hover {
 
 #card-completadas {
     border: 2px solid var(--color-fondo-verde-claro);
-}
-
-#card-completadas:hover {
-    box-shadow: 0px 10px 30px 0px var(--color-fondo-verde-claro);
 }
 
 #card-completadas h3,
@@ -232,8 +215,35 @@ header button:hover {
     border-top: 1px solid var(--color-borde);
 }
 
-.lista-tareas tbody tr:hover {
-    background-color: var(--color-fondo);
+.casillaMarcarEstado {
+    width: 1%;
+    padding-right: 0;
+}
+
+.marcarEstado {
+    appearance: none;
+    -webkit-appearance: none;
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--color-borde);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.marcarEstado:hover {
+    border-color: var(--color-completada);
+}
+
+.marcarEstado:checked {
+    background-color: var(--color-completada);
+    border-color: var(--color-completada);
+}
+
+.fila-completada td {
+    color: var(--color-texto-secundario);
+    text-decoration: line-through;
 }
 
 .tabla-vacia {
