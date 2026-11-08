@@ -29,3 +29,19 @@
     border-color: var(--color-azul-oscuro);
     color: var(--color-texto-claro);
 }
+
+@media (max-width: 600px) {
+
+    .filtros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        width: 100%;
+    }
+
+    .filtros button {
+        width: 100%;
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+}

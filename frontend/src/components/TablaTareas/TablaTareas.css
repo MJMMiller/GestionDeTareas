@@ -99,3 +99,150 @@
 .lista-tareas nav button:disabled:hover {
     background-color: var(--color-superficie);
 }
+
+@media (max-width: 700px) {
+
+    .lista-tareas {
+        margin: 24px 16px;
+    }
+
+    .tabla-contenedor {
+        overflow: visible;
+        border: 0;
+        background: transparent;
+    }
+
+    .lista-tareas table,
+    .lista-tareas tbody {
+        display: block;
+        width: 100%;
+    }
+
+    .lista-tareas thead {
+        display: none;
+    }
+
+    /* Cada tarea se convierte en tarjeta */
+    .lista-tareas tr {
+        display: block;
+        position: relative;
+        width: 100%;
+        margin-bottom: 14px;
+        padding: 14px 14px 14px 48px;
+
+        background-color: var(--color-superficie);
+        border: 1px solid var(--color-borde);
+        border-radius: var(--radio-card);
+    }
+
+    /* Datos de la tarea */
+    .lista-tareas td {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        width: 100%;
+        padding: 8px 0;
+
+        border-top: 1px solid var(--color-borde);
+
+        white-space: normal;
+        word-break: break-word;
+        gap: 15px;
+
+        text-align: right;
+        font-size: 12px;
+    }
+
+    /* Nombre del campo */
+    .lista-tareas td::before {
+        font-weight: 600;
+        color: var(--color-texto-secundario);
+        text-align: left;
+
+        min-width: 80px;
+        flex-shrink: 0;
+    }
+
+    /* Checkbox */
+    .lista-tareas td:nth-child(1) {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+
+        display: block;
+
+        width: auto;
+        padding: 0;
+        border: 0;
+    }
+
+    .lista-tareas td:nth-child(1)::before {
+        content: none;
+    }
+
+    /* Actividad */
+    .lista-tareas td:nth-child(2) {
+        padding-top: 0;
+        border-top: 0;
+        font-weight: 600;
+    }
+
+    .lista-tareas td:nth-child(2)::before {
+        content: "Actividad";
+    }
+
+    .lista-tareas td:nth-child(3)::before {
+        content: "Estado";
+    }
+
+    .lista-tareas td:nth-child(4)::before {
+        content: "Fecha";
+    }
+
+    .lista-tareas td:nth-child(5)::before {
+        content: "Materia";
+    }
+
+    .lista-tareas td:nth-child(6)::before {
+        content: "Descripción";
+    }
+
+    .lista-tareas td:nth-child(7)::before {
+        content: "Prioridad";
+    }
+
+    .lista-tareas td:nth-child(8)::before {
+        content: "Acciones";
+    }
+
+    /* Acciones */
+    .lista-tareas td:nth-child(8) {
+        align-items: center;
+    }
+
+    .btn-icono {
+        min-width: 40px;
+        min-height: 40px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Paginación */
+    .lista-tareas nav {
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .lista-tareas nav p {
+        width: 100%;
+        margin: 0 0 8px;
+        text-align: center;
+        font-size: 11px;
+    }
+
+    .lista-tareas nav button {
+        padding: 7px 9px;
+        font-size: 11px;
+    }
+}
