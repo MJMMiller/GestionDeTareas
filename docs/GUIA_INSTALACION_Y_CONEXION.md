@@ -1,9 +1,5 @@
 # Guía de instalación, conexión y diagnóstico — GestionDeTareas
 
-> **Alcance:** reproducción del entorno de desarrollo en una computadora nueva, instalación de dependencias, configuración local de Oracle Database XE 21c y verificación de la comunicación React ↔ Express ↔ Oracle.
->
-> **Evidencia:** pasos realizados y errores encontrados durante la integración local del 7 de noviembre de 2026. La implementación original de componentes y servicios pertenece al trabajo colaborativo del equipo; esta guía documenta su puesta en marcha y validación en otro equipo.
-
 ## 1. Objetivo
 
 Que cualquier integrante del grupo pueda clonar el repositorio, preparar un esquema Oracle local y ejecutar la aplicación sin necesitar las contraseñas ni la instalación de sus compañeros.
@@ -12,7 +8,7 @@ Que cualquier integrante del grupo pueda clonar el repositorio, preparar un esqu
 
 ```text
 Navegador (React + Vite)
-  http://localhost:5173 o el puerto que indique Vite
+  http://localhost:3001
           |
           | HTTP / JSON (fetch)
           v
@@ -27,13 +23,13 @@ Oracle Database XE 21c
   Tablas: GDT_MATERIAS y GDT_TAREAS
 ```
 
-React **no se conecta directamente a Oracle**. El navegador consulta las rutas HTTP del backend; Express ejecuta las consultas y responde con JSON. Las credenciales de la base de datos permanecen exclusivamente en `backend/.env`.
+React **no se conecta directamente a Oracle**. El navegador consulta las rutas HTTP del backend; Express ejecuta las consultas y responde con JSON. Las credenciales de la base de datos permanecen en `backend/.env`.
 
 ### Archivos relevantes
 
 | Archivo | Responsabilidad |
 | --- | --- |
-| `DB/creacion_tablas.sql` | DDL de las dos tablas y sus restricciones. |
+| `DB/creacion_tablas.sql` | DDL de las dos tablas |
 | `DB/insertar_datos.sql` | Registros iniciales para pruebas locales. |
 | `backend/src/db/conexion.js` | Lee `DB_USER`, `DB_PASSWORD` y `DB_CONNECT_STRING` y abre conexiones Oracle. |
 | `backend/src/index.js` | Carga `dotenv`, configura Express/CORS y publica las rutas. |
