@@ -254,38 +254,68 @@ header button:hover {
     border-color: var(--color-peligro-hover, #b91c1c);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 480px) {
+
+    header p {
+        display: none;
+    }
+
     header {
-        padding: 15px 20px;
+        flex-wrap: nowrap;
+    }
+
+    header button {
+        margin-left: auto;
+        white-space: nowrap;
     }
 
     .descripcion {
-        padding: 24px 20px;
+        padding: 20px 16px;
     }
+
+    .description-icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .descripcion-caption h2 {
+        font-size: 19px;
+    }
+}
 
     .resumen {
         flex-direction: column;
-        padding-inline: 20px;
+        align-items: stretch;
+        width: 100%;
+        padding-inline: 16px;
+        gap: 12px;
+        overflow: hidden;
     }
 
     .resumen-card {
         width: 100%;
+        min-width: 0;
+        flex: none;
+        padding: 14px;
+        gap: 14px;
     }
 
-    .lista-tareas {
-        margin: 24px 20px;
+    .resumen-card-icon {
+        width: 52px;
+        height: 52px;
+        min-width: 52px;
+        flex-shrink: 0;
     }
 
-    .lista-tareas nav p {
-        width: 100%;
+    .resumen-card-icon img {
+        width: 26px;
     }
 
-    .dialogo {
-        padding: 20px;
+    .resumen-card h3 {
+        font-size: 13px;
+        margin-bottom: 4px;
     }
 
-    .notificacion {
-        left: 20px;
-        right: 20px;
+    .resumen-card p {
+        font-size: 22px;
     }
-}
