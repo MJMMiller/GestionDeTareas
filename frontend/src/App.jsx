@@ -5,9 +5,9 @@ import clockIcon from './assets/icons/clock.svg'
 import checkIcon from './assets/icons/circle-check.svg'
 import TareaForm from './components/TareaForm'
 import TablaTareas from './components/TablaTareas'
+import FiltrosTareas from './components/FiltrosTareas'
 import ConfirmDialog from './components/ConfirmDialog'
 import Notificacion from './components/Notificacion'
-import Paginacion from './components/Paginacion'
 import { listarTareas, actualizarTarea, eliminarTarea } from './services/tareas'
 
 import './App.css'
@@ -19,14 +19,6 @@ function App() {
   const [tareaEditar, setTareaEditar] = useState(null)
   const [tareaEliminar, setTareaEliminar] = useState(null)
   const [notificacion, setNotificacion] = useState(null)
-  const [pagina, setPagina] = useState(1)
-
-  const [filtroEstado, setFiltroEstado] = useState('todas')
-
-  const cambiarFiltro = (estado) => {
-    setFiltroEstado(estado)
-    setPagina(1)
-  }
 
   const cargarTareas = async () => {
     try {
@@ -103,28 +95,6 @@ function App() {
   const pendientes = tareas.filter((t) => t.ESTADO === 'P').length
   const completadas = tareas.filter((t) => t.ESTADO === 'F').length
 
-  const tareasFiltradas = tareas.filter((tarea) => {
-    if (filtroEstado === 'pendientes') {
-      return tarea.ESTADO === 'P'
-    }
-
-    if (filtroEstado === 'progreso') {
-      return tarea.ESTADO === 'E'
-    }
-
-    if (filtroEstado === 'completadas') {
-      return tarea.ESTADO === 'F'
-    }
-
-    return true
-  })
-
-  const POR_PAGINA = 5
-  const totalPaginas = Math.max(1, Math.ceil(tareasFiltradas.length / POR_PAGINA))
-  const paginaActual = Math.min(pagina, totalPaginas)
-  const inicio = (paginaActual - 1) * POR_PAGINA
-  const tareasPagina = tareasFiltradas.slice(inicio, inicio + POR_PAGINA)
-
   return (
     <>
       <header>
@@ -189,45 +159,14 @@ function App() {
         <section className="lista-tareas" aria-labelledby="titulo-tareas">
           <h2 id="titulo-tareas">Lista de tareas</h2>
 
+          <FiltrosTareas />
 
-          <div className="filtros-estado" role="group" aria-label="Filtrar tareas por estado">
-          {[
-            { valor: 'todas', texto: 'Todas' },
-            { valor: 'pendientes', texto: 'Pendientes' },
-            { valor: 'progreso', texto: 'En progreso' },
-            { valor: 'completadas', texto: 'Completadas' }
-          ].map((filtro) => (
-            <button
-              key={filtro.valor}
-              type="button"
-              aria-pressed={filtroEstado === filtro.valor}
-              onClick={() => cambiarFiltro(filtro.valor)}
-            >
-              {filtro.texto}
-            </button>
-          ))}
-        </div>
-
-          <div className="tabla-contenedor">
-            <TablaTareas
-              estaFiltrando={filtroEstado !== 'todas'}
-              tareas={tareasPagina}
-              onCompletar={completarTarea}
-              onEditar={abrirEditar}
-              onEliminar={setTareaEliminar}
-            />
-          </div>
-
-          {tareasFiltradas.length > 0 && (
-            <Paginacion
-              pagina={paginaActual}
-              totalPaginas={totalPaginas}
-              desde={inicio + 1}
-              hasta={inicio + tareasPagina.length}
-              total={tareasFiltradas.length}
-              onCambiar={setPagina}
-            />
-          )}
+          <TablaTareas
+            tareas={tareas}
+            onCompletar={completarTarea}
+            onEditar={abrirEditar}
+            onEliminar={setTareaEliminar}
+          />
         </section>
 
       </main>
@@ -266,7 +205,6 @@ function App() {
 
       <footer className="pie-pagina">
         <p className="pie-pagina-titulo">Gestor de tareas</p>
-        <small>POWERED BY REACT</small>
       </footer>
     </>
   )
