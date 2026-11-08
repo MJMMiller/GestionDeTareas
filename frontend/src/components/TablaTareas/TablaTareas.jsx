@@ -1,7 +1,8 @@
 import { useContext, useEffect, useState } from "react";
-import { FiltroContext } from "../context/FiltroContext";
-import TaskItem from "./TaskItem";
-import Paginacion from "./Paginacion";
+import { FiltroContext } from "../../context/FiltroContext";
+import TaskItem from "../TaskItem/TaskItem";
+import Paginacion from "../Paginacion";
+import './TablaTareas.css'
 
 const POR_PAGINA = 5;
 

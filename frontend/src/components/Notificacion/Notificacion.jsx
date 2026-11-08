@@ -1,3 +1,5 @@
+import './Notificacion.css'
+
 function Notificacion({ mensaje, tipo }) {
     return (
         <div className={`notificacion ${tipo}`}>

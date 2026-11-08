@@ -1,0 +1,127 @@
+.dialogo-fondo {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(15, 45, 77, 0.5);
+    backdrop-filter: blur(2px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 16px;
+}
+
+.dialogo {
+    background-color: var(--color-superficie);
+    border-radius: var(--radio-card);
+    padding: 28px;
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 50px rgba(15, 45, 77, 0.25);
+}
+
+.dialogo-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.dialogo-encabezado h3 {
+    font-size: 20px;
+    color: var(--color-azul-oscuro);
+}
+
+.dialogo-encabezado button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: 0;
+    border-radius: var(--radio-boton);
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--color-texto-secundario);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.dialogo-encabezado button:hover {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+
+.dialogo form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.dialogo label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-texto);
+    margin-top: 8px;
+}
+
+.dialogo label:first-child {
+    margin-top: 0;
+}
+
+.dialogo input,
+.dialogo select,
+.dialogo textarea {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-boton);
+    font-family: var(--fuente-principal);
+    font-size: 14px;
+    color: var(--color-texto);
+    transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+.dialogo textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.dialogo input:hover,
+.dialogo select:hover,
+.dialogo textarea:hover {
+    border-color: var(--color-texto-secundario);
+}
+
+.dialogo input:focus,
+.dialogo select:focus,
+.dialogo textarea:focus {
+    outline: none;
+    background-color: var(--color-superficie);
+    border-color: var(--color-boton);
+    box-shadow: 0 0 0 3px var(--color-celeste-fondos);
+}
+
+.btn-guardar {
+    min-height: 44px;
+    margin-top: 16px;
+    padding: 10px;
+    background-color: var(--color-boton);
+    color: var(--color-texto-claro);
+    border: 0;
+    border-radius: var(--radio-boton);
+    font-family: var(--fuente-principal);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-guardar:hover {
+    background-color: var(--color-azul-oscuro);
+}

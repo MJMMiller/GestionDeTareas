@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { crearTarea, actualizarTarea } from "../services/tareas";
-import MateriasSelect from "./MateriasSelect";
+import { crearTarea, actualizarTarea } from "../../services/tareas";
+import MateriasSelect from "../MateriasSelect";
+import './TareaForm.css'
 
 function TareaForm({ tarea, onGuardado, onError }) {
 

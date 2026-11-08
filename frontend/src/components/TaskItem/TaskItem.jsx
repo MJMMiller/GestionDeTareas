@@ -1,3 +1,5 @@
+import './TaskItem.css'
+
 const ESTADOS = { P: "Sin empezar", E: "En progreso", F: "Finalizada" };
 const PRIORIDADES = { B: "Baja", M: "Media", A: "Alta" };
 

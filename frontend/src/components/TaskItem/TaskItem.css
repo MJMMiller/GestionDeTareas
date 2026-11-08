@@ -1,0 +1,60 @@
+.casillaMarcarEstado {
+    width: 1%;
+    padding-right: 0;
+}
+
+.marcarEstado {
+    appearance: none;
+    -webkit-appearance: none;
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--color-borde);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.marcarEstado:hover {
+    border-color: var(--color-completada);
+}
+
+.marcarEstado:checked {
+    background-color: var(--color-completada);
+    border-color: var(--color-completada);
+}
+
+.fila-completada td {
+    color: var(--color-texto-secundario);
+    text-decoration: line-through;
+}
+
+.btn-icono {
+    display: inline-flex;
+    vertical-align: middle;
+    background: none;
+    border: 0;
+    padding: 6px;
+    border-radius: var(--radio-boton);
+    color: var(--color-texto-secundario);
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-icono + .btn-icono {
+    margin-left: 6px;
+}
+
+.btn-icono:hover {
+    background-color: var(--color-celeste-fondos);
+    color: var(--color-boton);
+}
+
+.btn-icono-peligro {
+    color: var(--color-peligro, #dc2626);
+}
+
+.btn-icono-peligro:hover {
+    background-color: var(--color-fondo-rojo-claro, #fde2e2);
+    color: var(--color-peligro-hover, #b91c1c);
+}

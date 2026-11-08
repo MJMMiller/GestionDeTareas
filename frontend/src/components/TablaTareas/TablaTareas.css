@@ -1,0 +1,101 @@
+.lista-tareas {
+    margin: 30px 80px;
+}
+
+.lista-tareas h2 {
+    margin-bottom: 16px;
+    font-size: 20px;
+    color: var(--color-azul-oscuro);
+}
+
+.lista-tareas table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+
+}
+
+.lista-tareas th,
+.lista-tareas td {
+    padding: 16px;
+    white-space: nowrap;
+}
+
+.lista-tareas th {
+    background-color: var(--color-celeste-fondos);
+    color: var(--color-azul-oscuro);
+    font-weight: 600;
+}
+
+.lista-tareas td {
+    border-top: 1px solid var(--color-borde);
+}
+
+.tabla-vacia {
+    padding: 48px 20px;
+    text-align: center;
+}
+
+.tabla-vacia p {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-azul-oscuro);
+    margin-bottom: 6px;
+}
+
+.tabla-vacia small {
+    font-size: 13px;
+    color: var(--color-texto-secundario);
+}
+
+
+.lista-tareas nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.lista-tareas nav p {
+    margin-right: auto;
+    font-size: 13px;
+    color: var(--color-texto-secundario);
+}
+
+.lista-tareas nav button {
+    padding: 8px 12px;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-boton);
+    background-color: var(--color-superficie);
+    color: var(--color-texto);
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.lista-tareas nav button:hover {
+    background-color: var(--color-celeste-fondos);
+}
+
+.lista-tareas nav button.activa {
+    background-color: var(--color-boton);
+    border-color: var(--color-boton);
+    color: var(--color-texto-claro);
+}
+
+.lista-tareas nav button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.lista-tareas nav button:disabled:hover {
+    background-color: var(--color-superficie);
+}

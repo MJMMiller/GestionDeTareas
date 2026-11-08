@@ -1,5 +1,6 @@
 import { useContext } from "react";
-import { FiltroContext } from "../context/FiltroContext";
+import { FiltroContext } from "../../context/FiltroContext";
+import './FiltrosTareas.css'
 
 const OPCIONES = [
     { valor: "todas", texto: "Todas" },
