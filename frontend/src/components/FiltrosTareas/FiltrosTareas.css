@@ -21,6 +21,7 @@
 .filtros button:hover {
     background-color: var(--color-celeste-fondos);
     color: var(--color-azul-oscuro);
+    border: 1px solid var(--color-celeste-fondos);
 }
 
 .filtros button.activo {
