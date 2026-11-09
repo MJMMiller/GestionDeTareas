@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -198,7 +199,6 @@ header button:hover {
     letter-spacing: 1px;
 }
 
-
 .dialogo-confirmar {
     max-width: 420px;
 }
@@ -254,6 +254,92 @@ header button:hover {
     border-color: var(--color-peligro-hover, #b91c1c);
 }
 
+@media (max-width: 1200px) {
+
+    .descripcion {
+        padding: 25px 50px;
+    }
+
+    .resumen {
+        padding-inline: 50px;
+        gap: 15px;
+    }
+
+    .resumen-card {
+        padding: 16px;
+        gap: 14px;
+    }
+
+    .resumen-card-icon {
+        width: 60px;
+        height: 60px;
+        flex-shrink: 0;
+    }
+
+    .resumen-card-icon img {
+        width: 27px;
+    }
+
+    .resumen-card h3 {
+        font-size: 14px;
+    }
+
+    .resumen-card p {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 14px 25px;
+    }
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    header p {
+        padding-left: 15px;
+        margin-left: 5px;
+        font-size: 13px;
+    }
+
+    .descripcion {
+        padding: 25px 30px;
+    }
+
+    .description-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .description-icon img {
+        width: 40px;
+    }
+
+    .descripcion-caption {
+        padding-inline-start: 20px;
+    }
+
+    .descripcion-caption h2 {
+        font-size: 24px;
+    }
+
+    .resumen {
+        flex-direction: column;
+        align-items: stretch;
+        padding-inline: 30px;
+        gap: 14px;
+    }
+
+    .resumen-card {
+        width: 100%;
+        flex: none;
+        padding: 16px;
+    }
+}
+
 @media (max-width: 480px) {
 
     header p {
@@ -262,10 +348,23 @@ header button:hover {
 
     header {
         flex-wrap: nowrap;
+        padding: 12px 16px;
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 19px;
+    }
+
+    .logo-icon {
+        width: 36px;
+        height: 36px;
     }
 
     header button {
         margin-left: auto;
+        padding: 9px 12px;
+        font-size: 12px;
         white-space: nowrap;
     }
 
@@ -278,8 +377,20 @@ header button:hover {
         height: 56px;
     }
 
+    .description-icon img {
+        width: 30px;
+    }
+
+    .descripcion-caption {
+        padding-inline-start: 14px;
+    }
+
     .descripcion-caption h2 {
         font-size: 19px;
+    }
+
+    .descripcion-caption p {
+        font-size: 12px;
     }
 
     .resumen {
