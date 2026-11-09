@@ -299,15 +299,28 @@ npm run preview   # prueba local del build
 | :--- | :--- |
 | Tiempo de configuración inicial (min) | added 149 packages, and audited 150 packages in 22s|
 | Líneas de código de la app | ![](/assets/resultado_cloc.png)  |
-| Tamaño del build de producción (KB) | 288 dist |
-| Puntaje de rendimiento Lighthouse | Chrome DevTools, modo móvil |
+| Tamaño del build de producción (KB) | 256 KB (carpeta `dist`) |
+| Puntaje de rendimiento Lighthouse | **98** / 100 (modo móvil) |
+
+#### Detalle del puntaje de Lighthouse
+
+Medido sobre el build de producción (`npm run build` + `npm run preview`), en modo **Mobile**, con Chrome DevTools.
+
+![](assets/lighthouse.png)
+
+| Métrica | Resultado | Qué mide |
+| :--- | :--- | :--- |
+| First Contentful Paint | 1.6 s | Tiempo hasta que aparece el primer texto o imagen |
+| Largest Contentful Paint | 1.7 s | Tiempo hasta que se ve el elemento más grande de la página |
+| Total Blocking Time | 0 ms | Tiempo en que la página no responde a clics por estar ejecutando JavaScript |
+| Cumulative Layout Shift | 0.062 | Cuánto se "mueven" los elementos mientras carga (menos es mejor) |
+| Speed Index | 1.6 s | Qué tan rápido se llena visualmente la pantalla |
 
 Horas totales del grupo junto con dificultad percibida (de 1 a 5):
 - Mateo Miller: 
 - Jonnathan Saavedra: 
 - Daniel Durán: 
 - Nicolás Cedillo: 
-
 ---
 
 ## Documentación técnica
