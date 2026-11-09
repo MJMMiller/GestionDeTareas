@@ -10,6 +10,9 @@ export default defineConfig({
     allowedHosts: [
       '.trycloudflare.com'
     ],
+    proxy: {
+      '/api': 'http://localhost:3000'
+    },
   },
   test: {
     environment: 'jsdom',
