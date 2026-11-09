@@ -3,7 +3,6 @@ import userEvent from '@testing-library/user-event'
 import { describe, it, expect, vi } from 'vitest'
 import TaskItem from './TaskItem'
 
-// tarea de ejemplo 
 const tarea = {
   ID: 1,
   ACTIVIDAD: 'Estudiar React',
@@ -14,8 +13,6 @@ const tarea = {
   PRIORIDAD: 'A'
 }
 
-// TaskItem devuelve un <tr>, así que hay que ponerlo dentro de una tabla.
-// Si no, React muestra un aviso de HTML inválido.
 function dibujarFila(propsExtra = {}) {
   const props = {
     tarea,
@@ -38,9 +35,9 @@ describe('TaskItem', () => {
     dibujarFila()
 
     expect(screen.getByText('Estudiar React')).toBeInTheDocument()
-    expect(screen.getByText('Sin empezar')).toBeInTheDocument() // ESTADO "P"
+    expect(screen.getByText('Sin empezar')).toBeInTheDocument() 
     expect(screen.getByText('Estándares Web')).toBeInTheDocument()
-    expect(screen.getByText('Alta')).toBeInTheDocument()         // PRIORIDAD "A"
+    expect(screen.getByText('Alta')).toBeInTheDocument()         
   })
 
   it('llama a onCompletar con la tarea al marcar el checkbox', async () => {

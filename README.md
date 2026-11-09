@@ -175,8 +175,45 @@ Son funciones especiales de React que permiten utilizar características como el
 #### Estado global
 Cuando varios componentes necesitan los mismos datos, se evita pasarlos por muchas capas de props y se usa estado global. Opciones: **Context API** (incluida en React) o librerías como **Zustand**.
 
-**FALTA**
 
+*Context* es una herramienta incluida en React que permite compartir un dato entre varios componentes sin pasarlo por props de padre a hijo. Funciona como una *variable global*: cualquier componente que esté dentro del Provider puede leerla o cambiarla.
+
+En nuestra app lo usamos para el *filtro de tareas*. Los botones de filtro (FiltrosTareas) y la tabla (TablaTareas) son componentes hermanos que necesitan el mismo dato, así que lo guardamos en un contexto.
+
+*1. Crear el contexto* (src/context/FiltroContext.jsx)
+
+```jsx
+export const FiltroContext = createContext()
+
+export function FiltroProvider({ children }) {
+  const [filtro, setFiltro] = useState("todas")
+  return (
+    <FiltroContext.Provider value={{ filtro, setFiltro }}>
+      {children}
+    </FiltroContext.Provider>
+  )
+}
+
+
+**2. Envolver la app** (`src/main.jsx`)
+
+```jsx
+<FiltroProvider>
+  <App />
+</FiltroProvider>
+
+
+*3. Usarlo en los componentes* con useContext
+
+```jsx
+// FiltrosTareas: los botones cambian el filtro
+const { filtro, setFiltro } = useContext(FiltroContext)
+
+// TablaTareas: la tabla lee el filtro
+const { filtro } = useContext(FiltroContext)
+
+
+**Resultado:** al hacer clic en "Pendientes", `FiltrosTareas` llama a `setFiltro("P")` y `TablaTareas` se actualiza sola para mostrar solo las tareas pendientes. Así cumplimos el estado compartido entre 2 componentes
 
 
 ### Rutas y API
@@ -282,8 +319,6 @@ Para crear proyectos se utilizan herramientas externas como **Vite**. También s
 | Vitest + Testing Library | Pruebas |
 | CSS propio | Estilos y diseño responsive |
 
-🔴 **FALTA:** captura de React DevTools mostrando el árbol de componentes de la app.
-
 #### Build de producción
 
 ```bash
@@ -316,16 +351,15 @@ Medido sobre el build de producción (`npm run build` + `npm run preview`), en m
 | Cumulative Layout Shift | 0.062 | Cuánto se "mueven" los elementos mientras carga (menos es mejor) |
 | Speed Index | 1.6 s | Qué tan rápido se llena visualmente la pantalla |
 
-Horas totales del grupo junto con dificultad percibida (de 1 a 5):
-- Mateo Miller: 
-- Jonnathan Saavedra: 
-- Daniel Durán: 
-- Nicolás Cedillo: 
----
+#### Horas y dificultad percibida
 
-## Documentación técnica
-
-- [Guía de instalación y conexión React–Oracle](docs/GUIA_INSTALACION_Y_CONEXION.md)
+| Integrante | Horas | Dificultad (1-5) |
+| :--- | :-: | :-: |
+| Mateo Miller | 15 | 3 |
+| Jonnathan Saavedra | 12 | 3 |
+| Daniel Durán | 10 | 4 |
+| Nicolás Cedillo | 14 | 4 |
+| *Total del grupo / Promedio* | *51* | *3.5* |
 
 ---
 
