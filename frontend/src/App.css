@@ -281,7 +281,6 @@ header button:hover {
     .descripcion-caption h2 {
         font-size: 19px;
     }
-}
 
     .resumen {
         flex-direction: column;
@@ -319,3 +318,4 @@ header button:hover {
     .resumen-card p {
         font-size: 22px;
     }
+}
