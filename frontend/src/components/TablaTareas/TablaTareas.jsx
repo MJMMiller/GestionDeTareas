@@ -6,7 +6,7 @@ import './TablaTareas.css'
 
 const POR_PAGINA = 5;
 
-function TablaTareas({ tareas, onCompletar, onEditar, onEliminar }) {
+function TablaTareas({ tareas, cargando, onCompletar, onEditar, onEliminar }) {
 
     const { filtro } = useContext(FiltroContext);
     const [pagina, setPagina] = useState(1);
@@ -23,6 +23,17 @@ function TablaTareas({ tareas, onCompletar, onEditar, onEliminar }) {
     const paginaActual = Math.min(pagina, totalPaginas);
     const inicio = (paginaActual - 1) * POR_PAGINA;
     const tareasPagina = tareasFiltradas.slice(inicio, inicio + POR_PAGINA);
+
+    if (cargando) {
+        return (
+            <div className="tabla-contenedor">
+                <div className="tabla-vacia">
+                    <p>Cargando tareas...</p>
+                </div>
+            </div>
+        );
+    }
+
 
     if (tareasFiltradas.length === 0) {
         return (

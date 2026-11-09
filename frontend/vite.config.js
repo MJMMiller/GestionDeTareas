@@ -8,7 +8,8 @@ export default defineConfig({
     strictPort: true,
     host: '0.0.0.0',
     allowedHosts: [
-      '.trycloudflare.com'
+      '.trycloudflare.com',
+      '.ngrok-free.dev'
     ],
     proxy: {
       '/api': 'http://localhost:3000'

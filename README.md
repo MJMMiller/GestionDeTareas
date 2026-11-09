@@ -10,7 +10,7 @@
 
 **Framework asignado:** React con paginación
 
-**URL pública:**
+**URL pública:** https://dolphin-suitor-security.ngrok-free.dev/
 
 **Repositorio:** https://github.com/MJMMiller/GestionDeTareas/tree/main
 

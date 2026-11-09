@@ -20,12 +20,16 @@ function App() {
   const [tareaEliminar, setTareaEliminar] = useState(null)
   const [notificacion, setNotificacion] = useState(null)
 
+  const [cargando, setCargando] = useState(true)
+
   const cargarTareas = async () => {
     try {
       const data = await listarTareas()
       setTareas(data)
     } catch (error) {
       console.error('Error:', error)
+    } finally {
+      setCargando(false)
     }
   }
 
@@ -163,6 +167,7 @@ function App() {
 
           <TablaTareas
             tareas={tareas}
+            cargando={cargando}
             onCompletar={completarTarea}
             onEditar={abrirEditar}
             onEliminar={setTareaEliminar}
