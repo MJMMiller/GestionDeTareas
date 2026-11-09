@@ -125,3 +125,44 @@
 .btn-guardar:hover {
     background-color: var(--color-azul-oscuro);
 }
+
+@media (max-width: 600px) {
+
+    .dialogo-fondo {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .dialogo {
+        width: 100%;
+        max-width: none;
+        max-height: calc(100vh - 20px);
+
+        padding: 20px 16px;
+        margin-top: 10px;
+    }
+
+    .dialogo-encabezado {
+        margin-bottom: 14px;
+        padding-bottom: 12px;
+    }
+
+    .dialogo-encabezado h3 {
+        font-size: 18px;
+    }
+
+    .dialogo input,
+    .dialogo select,
+    .dialogo textarea {
+        min-height: 44px;
+        font-size: 16px;
+    }
+
+    .dialogo textarea {
+        min-height: 90px;
+    }
+
+    .btn-guardar {
+        width: 100%;
+    }
+}
